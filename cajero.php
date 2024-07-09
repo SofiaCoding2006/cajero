@@ -23,7 +23,7 @@ switch($opcion){
         break;
     
     case 2:
-        echo "Tu saldo hasta el momento es: $saldo\n";
+        echo "Tu saldo en este momento es: $saldo\n";
         break;
     
     case 3:
