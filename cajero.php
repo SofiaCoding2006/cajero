@@ -2,15 +2,14 @@
 
 $saldo=0;
 
-echo "1. Agregar dinero";
-echo "2. Consultar saldo";
-echo "3. consignar dinero";
-echo "4. Retirar dinero";
-echo "5. Salir";
+echo "1. Agregar dinero \n";
+echo "2. Consultar saldo \n";
+echo "3. Retirar dinero \n";
+echo "4. Salir\n";
 
 
 while(true){
-    $opcion = (int)readline("selccione una opcion");
+    $opcion = (int)readline("Selccione una opcion");
 
 switch($opcion){
     case 1:
@@ -28,10 +27,6 @@ switch($opcion){
         break;
     
     case 3:
-        echo "Tu dinero hasta el momento es: $saldo\n";
-        break;
-    
-    case 4:
         $RetirarCantidad = (float)readline("¿Cuánto dinero deseas retirar? ");
         if ($RetirarCantidad > 0 && $RetirarCantidad <= $saldo) {
             $saldo -= $RetirarCantidad;
