@@ -38,17 +38,17 @@ while(true){
 
 switch($opcion){
     case 1:
-        
+        agregarDinero ($saldo)
         break;
     
     case 2:
-        
+        consultarDinero ($saldo)
         break;
     
     case 3:
-        $RetirarCantidad = (float)readline("¿Cuánto dinero deseas retirar? ");
+       retirarDinero ($saldo)
         break;
-    
+        
     case 0:
         echo "Gracias por utilizar este cajero.\n";
         exit;
