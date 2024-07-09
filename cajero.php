@@ -13,10 +13,10 @@ while(true){
 
 switch($opcion){
     case 1:
-        $Cantidad = (float)readline("¿Cuánto dinero desea agregar a su cuenta? ");
+        $Cantidad = (float)readline("¿Cuánto dinero deseas ingresar a tu cuenta? ");
         if ($Cantidad > 0) {
             $saldo += $Cantidad;
-            echo "Dinero agregado exitosamente: $Cantidad\n";
+            echo "El dinero fue agregado exitosamente: $Cantidad\n";
         } else {
             echo "Cantidad no válida. Ingrese un monto el cual pueda retirar.\n";
         }
@@ -34,12 +34,12 @@ switch($opcion){
         } elseif ($RetirarCantidad > $saldo) {
             echo "No tienes suficiente saldo para realizar el retiro.\n";
         } else {
-            echo "Cantidad no válida. Ingrese un monto positivo.\n";
+            echo "Cantidad no válida. Ingrese un monto que sea valido.\n";
         }
         break;
     
     case 0:
-        echo "Gracias por utilizar nuestro cajero.\n";
+        echo "Gracias por utilizar este cajero.\n";
         exit;
     
     default:
