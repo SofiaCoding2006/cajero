@@ -2,13 +2,6 @@
 
 $saldo=0;
 
-function mostrarMenu(){
-echo "1. Agregar dinero \n";
-echo "2. Consultar saldo \n";
-echo "3. Retirar dinero \n";
-echo "4. Salir\n";
-}
-
 function agregarDinero($saldo){
     $Cantidad = (int)readline("¿Cuánto dinero deseas ingresar a tu cuenta? ");
     if ($Cantidad > 0) {
@@ -17,12 +10,12 @@ function agregarDinero($saldo){
         } else {
             echo "Cantidad no válida. Ingrese un monto el cual pueda retirar.\n";
         }
+    }
 function consultarSaldo($saldo){
-    echo "Tu saldo en este momento es: $saldo\n";
+    echo "Tu saldo en este momento es: $saldo\n";}
     
 function retirarDinero($saldo){
-    echo "¿Cuánto dinero deseas retirar?";
-    $cantidad;
+    $RetirarCantidad = readline("¿Cuánto dinero deseas retirar?");
     if ($RetirarCantidad > 0 && $RetirarCantidad <= $saldo) {
             $saldo -= $RetirarCantidad;
             echo "Retiro de $RetirarCantidad exitoso\n";
@@ -31,22 +24,28 @@ function retirarDinero($saldo){
         } else {
             echo "Cantidad no válida. Ingrese un monto que sea valido.\n";
         }
+    }
 
-    
 while(true){
-    $opcion = (int)readline("Selccione una opcion");
+    echo "1. Agregar dinero \n";
+    echo "2. Consultar saldo \n";
+    echo "3. Retirar dinero \n";
+    echo "4. Salir\n";
+    
+
+$opcion = readline("Seleccione una opcion:");
 
 switch($opcion){
     case 1:
-        agregarDinero ($saldo)
+        agregarDinero ($saldo);
         break;
     
     case 2:
-        consultarDinero ($saldo)
+        consultarSaldo ($saldo);
         break;
     
     case 3:
-       retirarDinero ($saldo)
+        retirarDinero ($saldo);
         break;
         
     case 0:
